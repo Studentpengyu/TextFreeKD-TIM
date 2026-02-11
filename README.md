@@ -90,10 +90,33 @@ The training process consists of two stages:
 First, train the teacher model:
 
 ```bash
-cd "Teacher Network"
+cd Teacher Network
 python train.py
 ```
-   
 
+The trained teacher checkpoint will be saved to `Teacher Network/save_model/medseg.ckpt`
 
+### Stage 2: Train the Student Network with Knowledge Distillation
+
+After training the teacher model, use the saved checkpoint `medseg.ckpt` to train the student model with knowledge distillation.
+
+```bash
+cd KD
+python train.py
+```
+## Evaluation
+
+To evaluate a model, please run:
+
+```bash
+cd Teacher Network
+python evaluate.py
+```
+
+or 
+
+```bash
+cd KD
+python evaluate.py
+```
 

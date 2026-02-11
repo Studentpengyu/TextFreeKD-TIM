@@ -1,0 +1,30 @@
+TRAIN:
+  train_batch_size: 64 #64 32 24 16 8
+  lr: 0.0003 # 0.001 #0.0003
+
+  valid_batch_size: 64
+
+  image_size: [224,224]
+
+  min_epochs: 20
+  max_epochs: 100
+  patience: 20
+
+  device: 1
+
+  model_save_path: ./save_model
+  model_save_filename: medseg
+
+MODEL:
+#  bert_type: microsoft/BiomedVLP-CXR-BERT-specialized
+#  vision_type: facebook/convnext-tiny-224
+  bert_type: ./lib/BiomedVLP-CXR-BERT-specialized
+  vision_type: ./lib/convnext-tiny-224
+  project_dim: 768
+
+DATA:
+  train_csv_path: ./data/MoNuSeg/prompt/train.csv # QaTa-COV19-v2 MosMedDataPlus MoNuSeg
+  train_root_path: ./data/MoNuSeg/Train # QaTa-COV19-v2 MosMedDataPlus MoNuSeg
+
+  test_csv_path: ./data/MoNuSeg/prompt/test.csv # QaTa-COV19-v2 MosMedDataPlus MoNuSeg
+  test_root_path: ./data/MoNuSeg/Test # QaTa-COV19-v2 MosMedDataPlus MoNuSeg

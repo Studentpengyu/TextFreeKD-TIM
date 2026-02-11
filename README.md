@@ -81,11 +81,18 @@ MODEL:
             └── Images
 ```
 
-## Train
+## Training
 
-1. Train the Teacher Network
+The training process consists of two stages:
 
-2. KD
+### Stage 1: Train the Teacher Network
+
+First, train the teacher model:
+
+```bash
+cd "Teacher Network"
+python train.py
+```
    
 
 

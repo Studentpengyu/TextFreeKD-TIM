@@ -120,3 +120,18 @@ cd KD
 python evaluate.py
 ```
 
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{10902555,
+  author={Zhao, Pengyu and Hou, Yonghong and Yan, Zhijun and Huo, Shuwei},
+  title={Text-Driven Medical Image Segmentation With Text-Free Inference via Knowledge Distillation}, 
+  journal={IEEE Transactions on Instrumentation and Measurement}, 
+  year={2025},
+  volume={74},
+  pages={1-15},
+  doi={10.1109/TIM.2025.3545506}
+  }
+```
